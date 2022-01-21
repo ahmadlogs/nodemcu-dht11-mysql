@@ -2,9 +2,7 @@
 -- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Host: fdb33.awardspace.net
 -- Generation Time: Jan 19, 2022 at 03:47 PM
--- Server version: 5.7.20-log
 -- PHP Version: 5.5.38
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
