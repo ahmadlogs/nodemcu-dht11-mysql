@@ -1,5 +1,5 @@
 <?php
-
+//-------------------------------------------------------------------------------------------
 require 'config.php';
 
 $db;
@@ -17,8 +17,7 @@ $db;
 
 //header('Content-Type: application/json');
 //echo json_encode($rows);
-
-
+//-------------------------------------------------------------------------------------------
 ?>
 
 
@@ -73,42 +72,31 @@ $db;
 
 <div class="row">
   <div class="col-md-12">
-  <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Temperature</th>
-      <th scope="col">Humidity</th>
-      <th scope="col">date time</th>
-    </tr>
-  </thead>
-  <tbody>
-  <?PHP $i = 1; while ($row = mysqli_fetch_assoc($result)) {?>
-	  <tr>
-		<th scope="row"><?php echo $i++;?></th>
-		<td><?PHP echo $row['temperature'];?></td>
-		<td><?PHP echo $row['humidity'];?></td>
-		<td><?PHP echo date("Y-m-d h:i: A", strtotime($row['created_date']));?></td>
-	  </tr>
-  <?PHP } ?>
-  </tbody>
-</table>
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Temperature</th>
+        <th scope="col">Humidity</th>
+        <th scope="col">date time</th>
+      </tr>
+    </thead>
+    <tbody>
+    <?PHP $i = 1; while ($row = mysqli_fetch_assoc($result)) {?>
+      <tr>
+        <th scope="row"><?php echo $i++;?></th>
+        <td><?PHP echo $row['temperature'];?></td>
+        <td><?PHP echo $row['humidity'];?></td>
+        <td><?PHP echo date("Y-m-d h:i: A", strtotime($row['created_date']));?></td>
+      </tr>
+    <?PHP } ?>
+    </tbody>
+  </table>
 </div>
 </div>
-
-
 </div>
-
-
-
-  
-      
-
-
-
-<!-- --------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------- -->
  
-
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <script>
 //$(document).ready(function(){
